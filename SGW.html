@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Back-to-School Giveaway</title>
+
+<style>
+    * {
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+        margin: 0;
+        background: #eef4ff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding: 20px;
+    }
+
+    .card {
+        width: 90%;
+        max-width: 500px;
+        background: white;
+        padding: 35px;
+        border-radius: 12px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    h1 {
+        color: #004aad;
+        text-align: center;
+        margin-top: 0;
+    }
+
+    p {
+        text-align: center;
+        color: #555;
+        line-height: 1.5;
+    }
+
+    .deadline {
+        background: #fff4d6;
+        border: 1px solid #f0c36d;
+        border-radius: 8px;
+        padding: 10px;
+        font-weight: bold;
+        color: #7a4b00;
+        text-align: center;
+    }
+
+    label {
+        display: block;
+        margin-top: 15px;
+        font-weight: bold;
+        color: #222;
+    }
+
+    input {
+        width: 100%;
+        padding: 12px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 16px;
+    }
+
+    input:focus {
+        outline: 3px solid rgba(0, 74, 173, 0.2);
+        border-color: #004aad;
+    }
+
+    button {
+        width: 100%;
+        margin-top: 25px;
+        padding: 14px;
+        background: #004aad;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 18px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background: #00317a;
+    }
+
+    .secondary-button {
+        background: #555;
+    }
+
+    .secondary-button:hover {
+        background: #333;
+    }
+
+    .small-print {
+        font-size: 12px;
+        color: #777;
+        margin-top: 15px;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .alert {
+        text-align: left;
+        background: #fff7e6;
+        border-left: 6px solid orange;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .alert h2 {
+        color: #b00020;
+        text-align: center;
+        margin-top: 0;
+    }
+
+    .safety-confirmation {
+        background: #eaf8ee;
+        border: 2px solid #2e7d32;
+        color: #1b5e20;
+        padding: 16px;
+        border-radius: 10px;
+        margin: 20px 0;
+        text-align: left;
+        line-height: 1.6;
+    }
+
+    .safety-confirmation h3 {
+        margin-top: 0;
+        text-align: center;
+    }
+
+    ul {
+        line-height: 1.8;
+        padding-left: 24px;
+    }
+
+    .warning {
+        color: #b00020;
+        font-weight: bold;
+    }
+
+    .check {
+        color: #2e7d32;
+        font-weight: bold;
+    }
+
+    footer {
+        margin-top: 20px;
+        text-align: center;
+        font-size: 12px;
+        color: #777;
+    }
+</style>
+</head>
+
+<body>
+
+<main class="card">
+
+    <section id="formSection">
+
+        <h1>🎒 Back-to-School Giveaway</h1>
+
+        <p>
+            Enter for your chance to win a laptop, headphones,
+            or a $500 school-supply shopping spree!
+        </p>
+
+        <div class="deadline">
+            Entries close Friday at 5:00 PM
+        </div>
+
+        <form id="giveawayForm" autocomplete="off">
+
+            <label for="firstName">First Name</label>
+            <input
+                type="text"
+                id="firstName"
+                name="firstName"
+                autocomplete="off"
+                required
+            >
+
+            <label for="lastName">Last Name</label>
+            <input
+                type="text"
+                id="lastName"
+                name="lastName"
+                autocomplete="off"
+                required
+            >
+
+            <label for="emailAddress">Email Address</label>
+            <input
+                type="email"
+                id="emailAddress"
+                name="emailAddress"
+                autocomplete="off"
+                required
+            >
+
+            <label for="phoneNumber">Phone Number</label>
+            <input
+                type="tel"
+                id="phoneNumber"
+                name="phoneNumber"
+                autocomplete="off"
+                required
+            >
+
+            <label for="organization">School / Organization</label>
+            <input
+                type="text"
+                id="organization"
+                name="organization"
+                autocomplete="off"
+                required
+            >
+
+            <label for="purchaseChoice">
+                If you won, what would you buy?
+            </label>
+            <input
+                type="text"
+                id="purchaseChoice"
+                name="purchaseChoice"
+                autocomplete="off"
+                required
+            >
+
+            <button type="submit">
+                Submit Entry
+            </button>
+
+            <p class="small-print">
+                No purchase necessary. One entry per person.
+                Prizes shown for demonstration purposes.
+            </p>
+
+        </form>
+
+    </section>
+
+    <section
+        id="results"
+        class="hidden"
+        aria-live="polite"
+        tabindex="-1"
+    >
+
+        <div class="alert">
+
+            <h2>🎣 This Was a Phishing Awareness Exercise</h2>
+
+            <p style="text-align:left;">
+                If this had been a real phishing website, the information
+                requested on the form could have been collected and used
+                by an attacker.
+            </p>
+
+            <div class="safety-confirmation">
+
+                <h3>🔒 Your Information Is Safe</h3>
+
+                <strong>This exercise did not collect your information.</strong>
+
+                <br><br>
+
+                <span class="check">✔</span>
+                Nothing you entered was transmitted over the internet.
+
+                <br>
+
+                <span class="check">✔</span>
+                Nothing was saved to a database, email account, spreadsheet,
+                analytics service, or server.
+
+                <br>
+
+                <span class="check">✔</span>
+                The information was cleared from the form when you selected
+                “Submit Entry.”
+
+                <br>
+
+                <span class="check">✔</span>
+                This page does not identify or track individual participants.
+
+            </div>
+
+            <h3>What happened?</h3>
+
+            <ul>
+                <li>
+                    <span class="warning">⚠</span>
+                    You followed a QR code without first verifying its source.
+                </li>
+
+                <li>
+                    <span class="warning">⚠</span>
+                    You were asked to provide personal information before
+                    confirming who operated the website.
+                </li>
+
+                <li>
+                    <span class="warning">⚠</span>
+                    The giveaway used excitement, prizes, and a deadline
+                    to encourage quick action.
+                </li>
+            </ul>
+
+            <h3>How can you protect yourself?</h3>
+
+            <ul>
+                <li>Confirm who posted or sent a QR code before scanning it.</li>
+                <li>Preview and inspect the website address.</li>
+                <li>Research unexpected contests and giveaways.</li>
+                <li>Be cautious when a site requests personal information.</li>
+                <li>Do not rely only on professional-looking colors or logos.</li>
+                <li>
+                    Remember that legitimate-looking websites can still be fake.
+                </li>
+            </ul>
+
+            <h3>Simulation Result</h3>
+
+            <p style="text-align:left;">
+                <span class="warning">Risk Level: High</span>
+                <br><br>
+                The purpose of this demonstration is education—not punishment.
+                Take a moment to consider what you could verify before entering
+                information into an unfamiliar website.
+            </p>
+
+            <button
+                type="button"
+                class="secondary-button"
+                id="startOverButton"
+            >
+                Start Exercise Again
+            </button>
+
+        </div>
+
+    </section>
+
+    <footer>
+        Authorized cybersecurity awareness demonstration
+    </footer>
+
+</main>
+
+<script>
+    const giveawayForm = document.getElementById("giveawayForm");
+    const formSection = document.getElementById("formSection");
+    const resultsSection = document.getElementById("results");
+    const startOverButton = document.getElementById("startOverButton");
+
+    giveawayForm.addEventListener("submit", function(event) {
+        // Prevent the browser from submitting the form.
+        event.preventDefault();
+
+        /*
+         * Clear every entered value before changing screens.
+         * No fetch(), XMLHttpRequest, form action, storage API,
+         * analytics service, or server connection is used.
+         */
+        giveawayForm.reset();
+
+        // Hide the giveaway form.
+        formSection.classList.add("hidden");
+
+        // Display the phishing-awareness explanation.
+        resultsSection.classList.remove("hidden");
+
+        // Move keyboard and screen-reader focus to the results.
+        resultsSection.focus();
+    });
+
+    startOverButton.addEventListener("click", function() {
+        giveawayForm.reset();
+        resultsSection.classList.add("hidden");
+        formSection.classList.remove("hidden");
+        document.getElementById("firstName").focus();
+    });
+</script>
+
+</body>
+</html>
